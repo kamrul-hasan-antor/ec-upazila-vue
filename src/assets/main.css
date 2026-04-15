@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+* {
+  font-family: poppins, sans-serif;
+}
+
+@utility container {
+  padding: 0 20px;
+  @variant lg {
+    padding: 0 30px;
+  }
+  @variant 2xl {
+    max-width: 86rem;
+  }
+}
