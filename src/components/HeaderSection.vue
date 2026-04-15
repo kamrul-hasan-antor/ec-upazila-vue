@@ -1,0 +1,33 @@
+<script setup>
+import Logo from "./Logo.vue";
+import Button from "./Button.vue";
+import { Phone } from "@lucide/vue";
+</script>
+
+<template>
+  <div class="border-b border-[#ccc]">
+    <div className="container">
+      <div
+        class="flex flex-col md:flex-row py-2 md:items-center justify-between"
+      >
+        <a href="/">
+          <Logo />
+        </a>
+
+        <div class="flex items-center justify-center gap-6">
+          <div class="flex items-center divide-x divide-[#b3b3b3]">
+            <p class="text-[#333] text-sm pr-3">৫ কার্তিক, ১৪৩২</p>
+            <p class="text-[#333] text-sm px-3">বাংলা</p>
+            <p class="text-[#333] text-sm pl-3">English</p>
+          </div>
+
+          <!-- btton -->
+          <Button variant="primary">
+            <Phone class="fill-white size-4" />
+            <span class="text-sm">জরুরি যোগাযোগ</span>
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
