@@ -5,6 +5,7 @@ import VisiotorCount from "@/components/VisiotorCount.vue";
 import HeaderSection from "@/components/HeaderSection.vue";
 import QuickLinksSection from "@/components/QuickLinksSection.vue";
 import SocialMedia from "@/components/SocialMedia.vue";
+import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
@@ -15,4 +16,5 @@ import SocialMedia from "@/components/SocialMedia.vue";
   <Hero />
   <QuickLinksSection />
   <SocialMedia />
+  <Footer />
 </template>
