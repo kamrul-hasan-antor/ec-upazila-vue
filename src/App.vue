@@ -4,7 +4,7 @@ import Hero from "@/components/Hero.vue";
 import VisiotorCount from "@/components/VisiotorCount.vue";
 import HeaderSection from "@/components/HeaderSection.vue";
 import QuickLinksSection from "@/components/QuickLinksSection.vue";
- 
+import SocialMedia from "@/components/SocialMedia.vue";
 </script>
 
 <template>
@@ -12,8 +12,7 @@ import QuickLinksSection from "@/components/QuickLinksSection.vue";
   <Hero title="Become a Vue Developer" subtitle="Find the Vue job that fits your skills and needs" /> -->
   <VisiotorCount />
   <HeaderSection />
-
   <Hero />
   <QuickLinksSection />
- 
+  <SocialMedia />
 </template>

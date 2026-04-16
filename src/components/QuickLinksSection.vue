@@ -1,27 +1,28 @@
 <script setup lang="ts">
-import { Info, Vote } from "@lucide/vue";
+import { FileText, Info, Phone, Vote } from "@lucide/vue";
 import QuickLinksCards from "./QuickLinksCards.vue";
+import { h } from "vue";
 
 const quickLinks = [
   {
     title: "নির্বাচন তথ্য",
-    icon: Vote,
-    description: "বিস্তারিত তথ্য",
-    color: "#009951",
+    icon: () => h(Vote, { class: "text-[#374151] size-8" }),
+    description: "জাতীয় ও স্থানীয় সরকার নির্বাচন সম্পর্কিত সকল তথ্য",
+    color: "#FD641C",
     url: "/",
   },
   {
-    title: "নির্বাচন ফলাফল",
-    icon: Vote,
-    description: "বিস্তারিত ফলাফল",
-    color: "#FF5733",
+    title: "ভোটার নিবন্ধন",
+    icon: () => h(FileText, { class: "text-[#374151] size-6.5" }),
+    description: "নতুন ভোটার নিবন্ধন ও তথ্য সংশোধনের নির্দেশিকা",
+    color: "#C2042E",
     url: "/results",
   },
   {
-    title: "ভোটার তথ্য",
-    icon: Vote,
-    description: "ভোটার তথ্য",
-    color: "#337AFF",
+    title: "জরুরি যোগাযোগ",
+    icon: () => h(Phone, { class: "text-[#374151] size-6" }),
+    description: "উপজেলা নির্বাচন অফিসের ঠিকানা ও ফোন নম্বর",
+    color: "#00814E",
     url: "/voter-info",
   },
 ];
@@ -41,19 +42,21 @@ const quickLinks = [
         </h2>
 
         <!-- Info note -->
+
         <div
-          class="mt-2 flex items-start gap-2 bg-green-50 border border-green-200 rounded-md px-4 py-3 text-sm text-green-800"
+          class="mt-2 flex items-start sm:items-center gap-2 bg-[#F0FDF4] border-l-4 border border-[#00814E] rounded-md px-4 py-3 text-sm text-[#374151]"
         >
-          <Info />
-          <span
-            >অনুগ্রহ করে বিভাগ, জেলা, উপজেলা এবং কেন্দ্র নির্বাচন করুন। সঠিক
-            তথ্য নির্বাচন করলে আপনি প্রয়োজনীয় তথ্য পাবেন।</span
+          <Info class="size-5 shrink-0" />
+          <span class="pt-0.5"
+            >আপনার অঞ্চল, জেলা, উপজেলা ও থানা নির্বাচন করুন। স্থানীয় অফিসের
+            বিস্তারিত তথ্য, নোটিশ, জনসেবা এবং এলাকাভিত্তিক গুরুত্বপূর্ণ তথ্য
+            দেখতে পাবেন।</span
           >
         </div>
       </div>
 
       <!-- Quick Links -->
-      <div class="grid md:grid-cols-3 gap-4 mt-10">
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
         <QuickLinksCards
           v-for="link in quickLinks"
           :key="link.title"

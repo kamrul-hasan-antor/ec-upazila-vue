@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+  --text-sm: 15px;
+}
+
 @font-face {
   font-family: "kalpurush";
   src: url("./fonts/kalpurush.ttf") format("truetype");
@@ -10,7 +14,7 @@
 
 @font-face {
   font-family: "nikosh";
-  src: url("./fonts/nikosh.ttf");
+  src: url("./fonts/nikosh.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -47,4 +51,8 @@ a {
 
 .font-nikosh {
   font-family: nikosh !important;
+}
+
+.text-sm {
+  font-size: var(--text-sm);
 }
