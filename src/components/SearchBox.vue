@@ -42,60 +42,105 @@
 }
 </style>
 
-<script>
-import { ChevronDown } from "@lucide/vue";
-import Multiselect from "vue-multiselect";
+<script setup>
+import { ref, watch } from "vue";
 
-export default {
-  components: { Multiselect, ChevronDown },
-  data() {
-    return {
-      isOpen: false,
-      value: null,
-      options: [
-        { name: "Vue.js", language: "JavaScript" },
-        { name: "Rails", language: "Ruby" },
-        { name: "Laravel", language: "PHP" },
-        { name: "Phoenix", language: "Elixir" },
-      ],
-    };
-  },
-};
+import SelectOptions from "./SelectOptions.vue";
+import Button from "./Button.vue";
+
+const anchal = ref(null);
+const zila = ref(null);
+const upazila = ref(null);
+const thana = ref(null);
+
+const anchalOptions = [
+  { name: "ঢাকা" },
+  { name: "চট্টগ্রাম" },
+  { name: "খুলনা" },
+  { name: "রাজশাহী" },
+];
+
+const zilaOptions = [
+  { name: "ঢাকা" },
+  { name: "ফরিদপুর" },
+  { name: "চট্টগ্রাম" },
+  { name: "কক্সবাজার" },
+];
+
+const upazilaOptions = [
+  { name: "সাভার" },
+  { name: "দোহার" },
+  { name: "ভাঙ্গা" },
+  { name: "বোয়ালখালী" },
+];
+
+const thanaOptions = [
+  { name: "সাভার থানা" },
+  { name: "দোহার থানা" },
+  { name: "ভাঙ্গা থানা" },
+  { name: "বোয়ালখালী থানা" },
+];
+
+// watch(anchal, (val) => console.log("অঞ্চল:", val));
+// watch(zila, (val) => console.log("জেলা:", val));
+// watch(upazila, (val) => console.log("উপজেলা:", val));
+// watch(thana, (val) => console.log("থানা:", val));
 </script>
 
 <template>
-  <div class="grid grid-cols-4">
-    <multiselect
-      ref="multiselect"
-      v-model="value"
-      :options="options"
-      placeholder="অঞ্চল নির্বাচন করুন"
-      track-by="name"
-      label="language"
-      selectedLabel=""
-      selectLabel=""
-      :max-height="150"
-      @open="isOpen = true"
-      @close="isOpen = false"
+  <div
+    class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_1fr_0.4fr] gap-4"
+  >
+    <div>
+      <p class="text-[#00814E] text-base mb-2">অঞ্চল</p>
+
+      <SelectOptions
+        v-model="anchal"
+        :options="anchalOptions"
+        placeholder="অঞ্চল নির্বাচন করুন"
+        label="name"
+      />
+    </div>
+
+    <div>
+      <p class="text-[#00814E] text-base mb-2">জেলা</p>
+
+      <SelectOptions
+        v-model="zila"
+        :options="zilaOptions"
+        placeholder="জেলা নির্বাচন করুন"
+        label="name"
+      />
+    </div>
+
+    <div>
+      <p class="text-[#00814E] text-base mb-2">উপজেলা</p>
+
+      <SelectOptions
+        v-model="upazila"
+        :options="upazilaOptions"
+        placeholder="উপজেলা নির্বাচন করুন"
+        label="name"
+      />
+    </div>
+
+    <div>
+      <p class="text-[#00814E] text-base mb-2">থানা</p>
+
+      <SelectOptions
+        v-model="thana"
+        :options="thanaOptions"
+        placeholder="থানা নির্বাচন করুন"
+        label="name"
+      />
+    </div>
+
+    <div
+      class="flex items-end justify-end md:justify-start sm:col-span-2 md:col-span-1"
     >
-      <template #noResult>
-        <p class="text-center">Not Found.</p>
-      </template>
-
-      <template #placeholder>
-        <span class="pl-1.25">অঞ্চল নির্বাচন করুন</span>
-      </template>
-
-      <template #caret>
-        <div
-          class="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer transition-transform duration-200"
-          :class="{ 'rotate-180': isOpen }"
-        >
-          <ChevronDown size="18" color="#000" />
-        </div>
-      </template>
-    </multiselect>
+      <Button class="text-sm font-normal! h-10 w-full sm:w-max">
+        অনুসন্ধান
+      </Button>
+    </div>
   </div>
-
-  <div></div>
 </template>

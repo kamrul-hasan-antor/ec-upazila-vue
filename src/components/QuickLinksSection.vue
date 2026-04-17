@@ -36,22 +36,24 @@ const quickLinks = [
         <div
           class="relative z-10 -mt-12 md:-mt-16 bg-white rounded-xl shadow-[0px_8px_40px_0px_#00000025] border border-gray-100 px-6 py-5 md:px-10 md:py-7"
         >
-          <h2
-            class="text-base md:text-lg font-semibold text-gray-700 mb-4 border-l-4 border-[#009951] pl-3"
-          >
-            উপজেলা তথ্য অনুসন্ধান
-          </h2>
+          <div class="border-b pb-4 mb-6 border-[#F3F4F6]">
+            <h2
+              class="text-base md:text-lg font-semibold text-[#1F2937] border-l-4 border-[#009951] pl-3"
+            >
+              উপজেলা তথ্য অনুসন্ধান
+            </h2>
+          </div>
 
           <SearchBox />
 
           <div
-            class="mt-2 flex items-start sm:items-center gap-2 bg-[#F0FDF4] border-l-4 border border-[#00814E] rounded-md px-4 py-3 text-sm text-[#374151]"
+            class="mt-6 flex gap-2 bg-[#F0FDF4] border-l-4 border border-[#00814E] rounded-md px-4 py-3 text-sm text-[#374151]"
           >
             <Info class="size-5 shrink-0" />
             <span class="pt-0.5"
               >আপনার অঞ্চল, জেলা, উপজেলা ও থানা নির্বাচন করুন। স্থানীয় অফিসের
               বিস্তারিত তথ্য, নোটিশ, জনসেবা এবং এলাকাভিত্তিক গুরুত্বপূর্ণ তথ্য
-              দেখতে পাবেন।</span
+              দেখতে পাবেন। </span
             >
           </div>
         </div>

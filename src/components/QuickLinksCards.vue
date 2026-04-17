@@ -1,6 +1,5 @@
 <script setup>
 import { ArrowRight } from "@lucide/vue";
-import { defineProps } from "vue";
 
 defineProps({
   title: {
@@ -43,7 +42,10 @@ defineProps({
       :style="{ color }"
       class="mt-4 text-sm flex items-center gap-0.5 font-medium group"
     >
-      বিস্তারিত দেখুন <arrow-right class="size-4 group-hover:ml-1 transition-all duration-200" />
+      বিস্তারিত দেখুন
+      <arrow-right
+        class="size-4 group-hover:ml-1 transition-all duration-200"
+      />
     </a>
   </div>
 </template>
