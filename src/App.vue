@@ -1,7 +1,6 @@
 <script setup>
-import Navbar from "@/components/Navbar.vue";
 import Hero from "@/components/Hero.vue";
-import VisiotorCount from "@/components/VisiotorCount.vue";
+import ViewControlBar from "@/components/ViewControlBar.vue";
 import HeaderSection from "@/components/HeaderSection.vue";
 import QuickLinksSection from "@/components/QuickLinksSection.vue";
 import SocialMedia from "@/components/SocialMedia.vue";
@@ -9,12 +8,18 @@ import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
-  <!-- <Navbar />
-  <Hero title="Become a Vue Developer" subtitle="Find the Vue job that fits your skills and needs" /> -->
-  <VisiotorCount />
+  <!-- landing page start -->
+
+  <!-- <ViewControlBar />
   <HeaderSection />
   <Hero />
   <QuickLinksSection />
   <SocialMedia />
-  <Footer />
+  <Footer /> -->
+
+  <!-- landing page end -->
+
+  <!-- Upozila Home page start -->
+
+  <ViewControlBar />
 </template>
