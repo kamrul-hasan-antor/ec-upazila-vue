@@ -5,6 +5,9 @@ import HeaderSection from "@/components/HeaderSection.vue";
 import QuickLinksSection from "@/components/QuickLinksSection.vue";
 import SocialMedia from "@/components/SocialMedia.vue";
 import Footer from "@/components/Footer.vue";
+import UpazilaHeroSection from "./components/UpazilaHeroSection.vue";
+import NoticeBoard from "./components/NoticeBoard.vue";
+import QuickInfoAccess from "./components/QuickInfoAccess.vue";
 </script>
 
 <template>
@@ -20,6 +23,9 @@ import Footer from "@/components/Footer.vue";
   <!-- landing page end -->
 
   <!-- Upozila Home page start -->
-
   <ViewControlBar />
+  <HeaderSection />
+  <UpazilaHeroSection />
+  <NoticeBoard />
+  <QuickInfoAccess />
 </template>

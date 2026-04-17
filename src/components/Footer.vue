@@ -29,10 +29,10 @@ const footerLinks = [
     <div class="container">
       <div class="pb-8 pt-10 md:pb-12 md:pt-15">
         <div
-          className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-x-13"
+          class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-x-13"
         >
-          <div className="space-y-4 sm:col-span-2 md:col-span-3 lg:col-span-1">
-            <div className="flex items-center gap-3">
+          <div class="space-y-4 sm:col-span-2 md:col-span-3 lg:col-span-1">
+            <div class="flex items-center gap-3">
               <img
                 :src="logoImage"
                 alt="logo"
@@ -40,14 +40,14 @@ const footerLinks = [
               />
 
               <p
-                className="text-white text-base md:text-lg font-semibold leading-tight md:ml-20"
+                class="text-white text-base md:text-lg font-semibold leading-tight md:ml-20"
               >
                 বাংলাদেশ নির্বাচন কমিশন
               </p>
             </div>
 
-            <div className="space-y-2 text-sm text-[#D1D5DB] md:pt-6">
-              <p className="text-white/60">
+            <div class="space-y-2 text-sm text-[#D1D5DB] md:pt-6">
+              <p class="text-white/60">
                 বাংলাদেশ নির্বাচন কমিশনের উপজেলা পোর্টাল – স্থানীয় নির্বাচন
                 তথ্য, অফিস যোগাযোগ এবং নাগরিক সেবার একটি কেন্দ্রীয় প্ল্যাটফর্ম।
               </p>

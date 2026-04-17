@@ -1,8 +1,9 @@
-<script setup lang="ts">
+<script setup>
 import { FileText, Info, Phone, Vote } from "@lucide/vue";
 import QuickLinksCards from "./QuickLinksCards.vue";
 import { h } from "vue";
 import SearchBox from "./SearchBox.vue";
+import SectionTitle from "./SectionTitle.vue";
 
 const quickLinks = [
   {
@@ -37,11 +38,10 @@ const quickLinks = [
           class="relative z-10 -mt-12 md:-mt-16 bg-white rounded-xl shadow-[0px_8px_40px_0px_#00000025] border border-gray-100 px-6 py-5 md:px-10 md:py-7"
         >
           <div class="border-b pb-4 mb-6 border-[#F3F4F6]">
-            <h2
-              class="text-base md:text-lg font-semibold text-[#1F2937] border-l-4 border-[#009951] pl-3"
-            >
-              উপজেলা তথ্য অনুসন্ধান
-            </h2>
+            <SectionTitle
+              title="উপজেলা তথ্য অনুসন্ধান"
+              extendedClass="text-[#1F2937]"
+            />
           </div>
 
           <SearchBox />
@@ -53,8 +53,8 @@ const quickLinks = [
             <span class="pt-0.5"
               >আপনার অঞ্চল, জেলা, উপজেলা ও থানা নির্বাচন করুন। স্থানীয় অফিসের
               বিস্তারিত তথ্য, নোটিশ, জনসেবা এবং এলাকাভিত্তিক গুরুত্বপূর্ণ তথ্য
-              দেখতে পাবেন। </span
-            >
+              দেখতে পাবেন।
+            </span>
           </div>
         </div>
 
