@@ -1,3 +1,21 @@
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+
+<style>
+.multiselect__option--highlight {
+  background: #00814e !important;
+  color: white !important;
+}
+
+.multiselect--active .multiselect__tags {
+  border-color: #00814e !important;
+}
+
+.multiselect__input::placeholder {
+  color: #adadad;
+  font-size: 14px;
+}
+</style>
+
 <script setup>
 import { ref } from "vue";
 import { ChevronDown } from "@lucide/vue";
@@ -29,6 +47,7 @@ const isOpen = ref(false);
     @close="isOpen = false"
   >
     <!-- open-direction="bottom" -->
+
     <template #noResult><p class="text-center">Not Found.</p></template>
     <template #placeholder
       ><span class="pl-1.25">{{ placeholder }}</span></template
@@ -38,7 +57,7 @@ const isOpen = ref(false);
         class="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer transition-transform duration-200"
         :class="{ 'rotate-180': isOpen }"
       >
-        <ChevronDown size="18" color="#000" />
+        <ChevronDown size="18" color="#adadad" />
       </div>
     </template>
   </Multiselect>

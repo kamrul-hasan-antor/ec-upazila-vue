@@ -1,46 +1,4 @@
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 
-<!-- <style>
-.multiselect__option--highlight {
-  background: #6b7280 !important;
-  color: white !important;
-}
-
-.multiselect__option--highlight::after {
-  background: #6b7280 !important;
-  content: "" !important;
-}
-
-.multiselect__option--selected.multiselect__option--highlight::after {
-  content: "" !important;
-}
-
-.multiselect--active .multiselect__placeholder {
-  color: #16a34a !important;
-}
-
-.multiselect--active .multiselect__tags {
-  border-color: #3b82f6 !important;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3) !important;
-}
-
-/* Hide the caret/arrow since it's always open */
-.multiselect__select {
-  display: none;
-}
-
-/* Always show dropdown */
-.multiselect__content-wrapper {
-  display: block !important;
-}
-</style> -->
-
-<style>
-.multiselect__input::placeholder {
-  color: #adadad;
-  font-size: 14px;
-}
-</style>
 
 <script setup>
 import { ref, watch } from "vue";
