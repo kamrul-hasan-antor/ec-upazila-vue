@@ -9,6 +9,7 @@ import UpazilaHeroSection from "./components/UpazilaHeroSection.vue";
 import NoticeBoard from "./components/NoticeBoard.vue";
 import QuickInfoAccess from "./components/QuickInfoAccess.vue";
 import AboutUpazila from "./components/AboutUpazila.vue";
+import LocationMap from "./components/LocationMap.vue";
 </script>
 
 <template>
@@ -30,4 +31,6 @@ import AboutUpazila from "./components/AboutUpazila.vue";
   <NoticeBoard />
   <QuickInfoAccess />
   <AboutUpazila />
+  <LocationMap />
+  <Footer></Footer>
 </template>
