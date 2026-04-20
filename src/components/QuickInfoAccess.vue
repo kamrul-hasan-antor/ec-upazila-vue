@@ -20,46 +20,46 @@ const cards = [
     description:
       "উপজেলা কার্যালয়গুলো থেকে সকল সার্কুলার, আদেশ ও ঘোষণা সংগ্রহ করুন",
     color: "#009951",
-    icon: () => h(FileText, { class: "w-5 h-5" }),
+    icon: () => h(FileText),
   },
   {
     title: "অফিস যোগাযোগ",
     description:
       "স্থানীয় প্রশাসনিক কর্মকর্তাদের ফোন নম্বর, ইমেল এবং বিস্তারিত তথ্য খুঁজুন",
     color: "#00814E",
-    icon: () => h(Building2, { class: "w-5 h-5" }),
+    icon: () => h(Building2),
   },
   {
     title: "জরুরি যোগাযোগ",
     description: "পুলিশ, দমকল বাহিনী, হাসপাতাল এবং দুর্যোগ ব্যবস্থাপনা হটলাইন",
     color: "#C2042E",
-    icon: () => h(PhoneCall, { class: "w-5 h-5" }),
+    icon: () => h(PhoneCall),
   },
   {
     title: "উপজেলা প্রোফাইল",
     description: "এলাকাটির ভৌগোলিক, জনসংখ্যাতাত্ত্বিক ও ঐতিহাসিক প্রেক্ষাপট",
     color: "#FD641C",
-    icon: () => h(Landmark, { class: "w-5 h-5" }),
+    icon: () => h(Landmark),
   },
   {
     title: "জনসেবা",
     description: "নাগরিক পরিষেবার সংক্রান্ত তথ্য এবং আবেদন পদ্ধতি",
     color: "#1E9ABD",
-    icon: () => h(Briefcase, { class: "w-5 h-5" }),
+    icon: () => h(Briefcase),
   },
   {
     title: "অভিযোগ ও মতামত",
     description:
       "অভিযোগ সরাসরি উপজেলা নির্বাহী কর্মকর্তার (ইউএনও) কাছে জমা দিন",
     color: "#8769DC",
-    icon: () => h(MessageSquare, { class: "w-5 h-5" }),
+    icon: () => h(MessageSquare),
   },
   {
     title: "মানচিত্র ও অবস্থান",
     description:
       "বিস্তারিত উপজেলা মানচিত্র, ইউনিয়ন সীমানা এবং অফিসের অবস্থান দেখুন",
     color: "#83144D",
-    icon: () => h(Map, { class: "w-5 h-5" }),
+    icon: () => h(Map),
   },
   {
     title: "ডাউনলোড ও ফর্ম",
@@ -77,14 +77,14 @@ const cards = [
 </script>
 
 <template>
-  <div class="bg-[#F7FAFC] py-8 md:py-16">
+  <div class="bg-[#F7FAFC] section-gap">
     <div class="container">
       <SectionTitle
         title="দ্রুত তথ্য অ্যাক্সেস"
         description="পোর্টালের মূল অংশ এবং অপরিহার্য প্রশাসনিক মডিউলগুলো অন্বেষণ করুন।"
       />
 
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mt-8">
         <InfoAccessCards
           v-for="card in cards"
           :key="card.title"

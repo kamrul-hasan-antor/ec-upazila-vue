@@ -8,6 +8,7 @@ import Footer from "@/components/Footer.vue";
 import UpazilaHeroSection from "./components/UpazilaHeroSection.vue";
 import NoticeBoard from "./components/NoticeBoard.vue";
 import QuickInfoAccess from "./components/QuickInfoAccess.vue";
+import AboutUpazila from "./components/AboutUpazila.vue";
 </script>
 
 <template>
@@ -28,4 +29,5 @@ import QuickInfoAccess from "./components/QuickInfoAccess.vue";
   <UpazilaHeroSection />
   <NoticeBoard />
   <QuickInfoAccess />
+  <AboutUpazila />
 </template>
