@@ -4,70 +4,74 @@ import {
   FileText,
   Building2,
   PhoneCall,
-  BarChart2,
   Landmark,
   MessageSquare,
-  BookOpen,
+  Briefcase,
   Download,
-  BookMarked,
+  Link2,
+  Map,
 } from "@lucide/vue";
 import SectionTitle from "./SectionTitle.vue";
 import InfoAccessCards from "./InfoAccessCards.vue";
 
 const cards = [
   {
-    title: "ভূমি রেটিন",
-    description: "উপজেলা-ভিত্তিক জমির মালিক, দলিল ও রেকর্ড সম্পর্কিত তথ্য এবং জরুরি সম্পদ সংগ্রহ করুন",
+    title: "স্থানীয় নোটিশ",
+    description:
+      "উপজেলা কার্যালয়গুলো থেকে সকল সার্কুলার, আদেশ ও ঘোষণা সংগ্রহ করুন",
     color: "#009951",
     icon: () => h(FileText, { class: "w-5 h-5" }),
   },
   {
     title: "অফিস যোগাযোগ",
-    description: "অফিসের ঠিকানা, ফোন নম্বর ও যোগাযোগের মাধ্যম সম্পর্কিত তথ্য সমূহ",
-    color: "#0891B2",
+    description:
+      "স্থানীয় প্রশাসনিক কর্মকর্তাদের ফোন নম্বর, ইমেল এবং বিস্তারিত তথ্য খুঁজুন",
+    color: "#00814E",
     icon: () => h(Building2, { class: "w-5 h-5" }),
   },
   {
     title: "জরুরি যোগাযোগ",
-    description: "জরুরি পরিস্থিতিতে, প্রশাসন ও স্বাস্থ্য সেবার প্রয়োজনীয় যোগাযোগ নম্বর",
-    color: "#DC2626",
+    description: "পুলিশ, দমকল বাহিনী, হাসপাতাল এবং দুর্যোগ ব্যবস্থাপনা হটলাইন",
+    color: "#C2042E",
     icon: () => h(PhoneCall, { class: "w-5 h-5" }),
   },
   {
-    title: "উপজেলা প্রজেটিন",
-    description: "উপজেলার প্রশাসনিক, জনসংখ্যাতাত্ত্বিক ও ভৌগোলিক পরিচিতি",
-    color: "#EA580C",
-    icon: () => h(BarChart2, { class: "w-5 h-5" }),
-  },
-  {
-    title: "জনসেবা",
-    description: "সরকারি সেবা, পরিষেবা প্রদান ও নাগরিক সুবিধার সম্পূর্ণ বিবরণ",
-    color: "#0D9488",
+    title: "উপজেলা প্রোফাইল",
+    description: "এলাকাটির ভৌগোলিক, জনসংখ্যাতাত্ত্বিক ও ঐতিহাসিক প্রেক্ষাপট",
+    color: "#FD641C",
     icon: () => h(Landmark, { class: "w-5 h-5" }),
   },
   {
-    title: "অভিযোগ ও আবেদন",
-    description: "অভিযোগ দায়ের এবং সরকারি সেবার জন্য অনলাইনে আবেদন প্রক্রিয়া জানুন",
-    color: "#7C3AED",
+    title: "জনসেবা",
+    description: "নাগরিক পরিষেবার সংক্রান্ত তথ্য এবং আবেদন পদ্ধতি",
+    color: "#1E9ABD",
+    icon: () => h(Briefcase, { class: "w-5 h-5" }),
+  },
+  {
+    title: "অভিযোগ ও মতামত",
+    description:
+      "অভিযোগ সরাসরি উপজেলা নির্বাহী কর্মকর্তার (ইউএনও) কাছে জমা দিন",
+    color: "#8769DC",
     icon: () => h(MessageSquare, { class: "w-5 h-5" }),
   },
   {
-    title: "পরিচিতি ও অবস্থান",
-    description: "বিভিন্ন উপজেলার পরিচিতি, বিবরণ এবং অবস্থান সম্পর্কিত তথ্য দেখুন",
-    color: "#D97706",
-    icon: () => h(BookOpen, { class: "w-5 h-5" }),
+    title: "মানচিত্র ও অবস্থান",
+    description:
+      "বিস্তারিত উপজেলা মানচিত্র, ইউনিয়ন সীমানা এবং অফিসের অবস্থান দেখুন",
+    color: "#83144D",
+    icon: () => h(Map, { class: "w-5 h-5" }),
   },
   {
     title: "ডাউনলোড ও ফর্ম",
-    description: "প্রয়োজনীয় সরকারি ফর্ম ও নথি বিনামূল্যে ডাউনলোড করুন",
-    color: "#16A34A",
+    description: "সরকারি ফর্ম, নাগরিক সনদ এবং নির্দেশিকা নথি ডাউনলোড করুন",
+    color: "#0369A1",
     icon: () => h(Download, { class: "w-5 h-5" }),
   },
   {
-    title: "তথ্যসূত্র নিবন্ধ",
-    description: "বিভিন্ন বিষয়ে বিস্তারিত তথ্যসূত্র, নিবন্ধ ও অনুসন্ধান করুন",
-    color: "#0891B2",
-    icon: () => h(BookMarked, { class: "w-5 h-5" }),
+    title: "গুরুত্বপূর্ণ লিংক",
+    description: "জাতীয় পোর্টাল, মন্ত্রণালয় ও অধিদপ্তরসমূহের দ্রুত লিংক",
+    color: "#059669",
+    icon: () => h(Link2, { class: "w-5 h-5" }),
   },
 ];
 </script>

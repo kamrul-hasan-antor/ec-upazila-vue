@@ -8,16 +8,20 @@ defineProps({
 </script>
 
 <template>
-  <div class="bg-white rounded-lg p-5 border-2 border-[#F3F4F6] flex items-start gap-4">
+  <div
+    class="bg-white rounded-lg p-5 border-2 border-[#F3F4F6] flex items-start gap-4"
+  >
     <div
-      class="rounded-xl w-10 h-10 flex items-center justify-center shrink-0"
+      class="rounded-lg w-10 h-10 flex items-center justify-center shrink-0"
       :style="{ backgroundColor: color + '18' }"
     >
       <component :is="icon" :style="{ color }" class="w-5 h-5" />
     </div>
     <div>
-      <p class="text-sm font-bold text-gray-900 mb-1">{{ title }}</p>
-      <p class="text-xs text-gray-400 leading-relaxed">{{ description }}</p>
+      <p class="font-semibold mb-1.5" :style="{ color }">
+        {{ title }}
+      </p>
+      <p class="text-[#6B7280] text-sm">{{ description }}</p>
     </div>
   </div>
 </template>
