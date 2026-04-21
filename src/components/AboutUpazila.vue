@@ -72,11 +72,11 @@ const administrativeInfo = [
       />
 
       <div
-        class="grid xl:grid-cols-3 mt-6 rounded-xl border border-[#EBEBEB] gap-4"
+        class="grid xl:grid-cols-3 mt-6 rounded-lg border border-[#EBEBEB] gap-4"
       >
         <div class="col-span-1">
           <div
-            class="rounded-t-xl xl:rounded-tr-none xl:rounded-l-xl bg-[#009951] p-5"
+            class="rounded-t-lg xl:rounded-tr-none xl:rounded-l-lg bg-[#009951] p-5"
           >
             <p>Dhaka Division</p>
 

@@ -84,7 +84,7 @@ const cards = [
         description="পোর্টালের মূল অংশ এবং অপরিহার্য প্রশাসনিক মডিউলগুলো অন্বেষণ করুন।"
       />
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mt-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mt-6">
         <InfoAccessCards
           v-for="card in cards"
           :key="card.title"
