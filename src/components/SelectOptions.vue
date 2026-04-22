@@ -25,6 +25,7 @@ defineProps({
   options: { type: Array, required: true },
   placeholder: { type: String, default: "Select an option" },
   label: { type: String, default: "name" },
+  searchable: { type: Boolean, default: true },
 });
 
 const model = defineModel();
@@ -45,6 +46,7 @@ const isOpen = ref(false);
     :max-height="200"
     @open="isOpen = true"
     @close="isOpen = false"
+    :searchable="searchable"
   >
     <!-- open-direction="bottom" -->
 
